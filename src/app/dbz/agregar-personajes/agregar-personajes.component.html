@@ -1,0 +1,29 @@
+<h3>Agregar</h3>
+<hr>
+<form (ngSubmit)="agregar()">
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    />
+    <input 
+        type="number"
+        placeholder="Poder"
+        [value]="nuevo.poder"
+        name="poder"
+        [(ngModel)]="nuevo.poder"
+     />
+    <button type="submit">Agregar</button>
+</form>
+
+<!-- 
+    Vemos que el input es un tag,
+    que el valor inicial es el de nuevo.poder o nuevo.nombre,
+    y que tanto envia el valor como lo recibe de esta variable.
+
+    Otra forma de hacer input, menos recomendada: 
+
+    [value]="nuevo.nombre"
+    (input)="cambiarNombre( $event )" 
+-->

@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
     <div class="col">
-        <app-personajes [personajes]="personajes">
+        <app-personajes>
 
         </app-personajes>
         
@@ -16,7 +16,6 @@
         <!-- desde aquí recibimos nuevo y lo envia agregar-personajes.component.ts, que tiene el @imput -->
         <app-agregar-personajes 
         [nuevo]="nuevo"
-        (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
         ></app-agregar-personajes>
     </div>
-</div>
+</div> 
